@@ -3,16 +3,8 @@ import { theme } from '.';
 
 const GlobalStyles = createGlobalStyle`
     :root {
- --primary-color: ${({ theme }) => theme.colors.primary};
- --secondary-color: ${({ theme }) => theme.colors.secondary};
- --background-color: ${({ theme }) => theme.colors.background};
- --text-primary-color: ${({ theme }) => theme.colors.textPrimary};
- --text-secondary-color: ${({ theme }) => theme.colors.textSecondary};
- --border-color: ${({ theme }) => theme.colors.border};
- --success-color: ${({ theme }) => theme.colors.success};
- --danger-color: ${({ theme }) => theme.colors.danger};
- --warning-color: ${({ theme }) => theme.colors.warning};
- --info-color: ${({ theme }) => theme.colors.info};
+        --primary-color: ${theme.colors.primary};
+        --white-color: ${theme.colors.white};
     }
     
     * {
@@ -28,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 1.6rem;
-        line-height: 1.5; 
+        line-height: 1.5;
         background: linear-gradient(213deg, #4209C9 0%, #FA6EAD 100%);
         overflow: unset;
         text-rendering: optimizeLegibility;
@@ -81,8 +73,8 @@ const GlobalStyles = createGlobalStyle`
 
     /* Selection */
     ::selection {
- color: ${({ theme }) => theme.colors.white};
- background: var(--primary-color);
+        color: var(--white-color);
+        background: var(--primary-color);
     }
 
     /* Custom styles */
@@ -98,8 +90,8 @@ const GlobalStyles = createGlobalStyle`
     textarea:-webkit-autofill:hover,
     textarea:-webkit-autofill:focus,
     select:-webkit-autofill,
- select:-webkit-autofill:hover,
- select:-webkit-autofill:focus { 
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
         -webkit-text-fill-color: ${theme.colors.textPrimary};
         -webkit-box-shadow: 0 0 0px 1000px ${theme.colors.white} inset;
         transition: all 5000s ease-in-out 0s;
