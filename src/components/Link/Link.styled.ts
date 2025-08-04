@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import { theme } from '../../themes';
 
 type LinkStyledType = {
     title: string;
@@ -43,8 +42,8 @@ export const LinkBase = css<LinkStyledType>`
                 right: 0;
                 width: 0;
                 height: 2px;
-                background: ${theme.colors.primary};
-                transition: ${theme.transition.primary};
+                background: ${({ theme }) => theme.colors.primary};
+                transition: ${({ theme }) => theme.transition.primary};
             }
 
             &::after {

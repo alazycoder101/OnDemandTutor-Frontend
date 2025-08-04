@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../../themes';
 import { List, Row, Col } from 'antd';
 
 export const TutorItem = styled(List.Item)`
@@ -14,7 +13,7 @@ export const BoxHover = styled.div`
 export const QuestionItem = styled(Row)`
     background-color:#F4D1F3;
     border-radius: 25px;
-    border: 1px solid ${theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
     & .ant-list-item {
         border-block-end: none;
     }

@@ -1,10 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from '.';
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        --primary-color: ${theme.colors.primary};
-        --white-color: ${theme.colors.white};
+        --primary-color: ${({ theme }) => theme.colors.primary};
+        --white-color: ${({ theme }) => theme.colors.white};
     }
     
     * {
@@ -92,8 +91,8 @@ const GlobalStyles = createGlobalStyle`
     select:-webkit-autofill,
     select:-webkit-autofill:hover,
     select:-webkit-autofill:focus {
-        -webkit-text-fill-color: ${theme.colors.textPrimary};
-        -webkit-box-shadow: 0 0 0px 1000px ${theme.colors.white} inset;
+        -webkit-text-fill-color: ${({ theme }) => theme.colors.textPrimary};
+        -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.colors.white} inset;
         transition: all 5000s ease-in-out 0s;
     }
 
@@ -106,7 +105,7 @@ const GlobalStyles = createGlobalStyle`
         }
 
         & .ant-select-item-option-content {
-            color: ${theme.colors.textPrimary};
+            color: ${({ theme }) => theme.colors.textPrimary};
             font-size: 1.6rem;
         }
     }
