@@ -6,7 +6,7 @@ import { StrictMode } from 'react';
 import GlobalStyles from './themes/globalStyles.ts';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { createStyledBreakpointsTheme } from 'styled-breakpoints';
-import { ConfigProvider, App as AppAntd } from 'antd';
+import { ConfigProvider, App as AppAntd, } from 'antd';
 
 import { LocaleProvider } from './contexts/LocaleContext.tsx';
 
@@ -20,21 +20,22 @@ export const breakpoints = {
   xxl: '1400px',
 } as const;
 
+import { ThemeProvider as CustomThemeProvider } from './contexts/ThemeContext.tsx';
+
 const theme: DefaultTheme = createStyledBreakpointsTheme({
   breakpoints,
 });
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LocaleProvider>
-      <ThemeProvider theme={theme}>
+      <CustomThemeProvider>
         <ConfigProvider theme={AntdThemeConfig}>
+          <GlobalStyles />
           <AppAntd>
             <App />
           </AppAntd>
-          <GlobalStyles />
         </ConfigProvider>
-      </ThemeProvider>
+      </CustomThemeProvider>
     </LocaleProvider>
   </StrictMode>
 )
