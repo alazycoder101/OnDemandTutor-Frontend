@@ -44,7 +44,7 @@ const FileViewer: React.FC<FileViewerProps> = (props) => {
         }
       };
     }
-  }, [iframeRef]);
+  }, [iframeRef, handleIframeClick]);
 
 
   useEffect(() => {

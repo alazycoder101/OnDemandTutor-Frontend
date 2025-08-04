@@ -33,7 +33,7 @@ const QuestionItem: React.FC<QuestionItemProps> = ({ item }) => {
                 avatarUrl: item.account.avatarUrl || '',
             });
         }
-    }, []);
+    }, [item]);
 
     const navigate = useNavigate();
     const [api, contextHolderNotification] = notification.useNotification({

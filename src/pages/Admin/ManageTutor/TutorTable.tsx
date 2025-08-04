@@ -9,7 +9,7 @@ interface Education {
   majorName?: string;
   specialization?: string;
   verified?: boolean;
-};
+}
 
 interface Tutor {
   id: number;
@@ -22,7 +22,7 @@ interface Tutor {
   status: string;
   gender: boolean;
   dateOfBirth: string;
-};
+}
 
 interface TutorTableProps {
   tutors: Tutor[];

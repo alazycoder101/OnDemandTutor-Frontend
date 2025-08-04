@@ -26,7 +26,7 @@ const CertificationForm: React.FC<CertProps> = (props) => {
   //---------------------------MODAL---------------------------
   function showModal() {
     setIsFormOpen(true);
-  };
+  }
 
   const handleCancel = () => {
     setIsFormOpen(false);

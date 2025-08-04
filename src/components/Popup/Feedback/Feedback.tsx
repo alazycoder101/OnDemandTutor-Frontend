@@ -51,7 +51,7 @@ const Feedback: React.FC<FeedbackProps> = (props) => {
       });
     }
 
-  };
+  }
 
   const handleCancel = () => {
     setIsFormOpen(false);
@@ -76,7 +76,7 @@ const Feedback: React.FC<FeedbackProps> = (props) => {
         });
         setIsFormOpen(false);
       }
-    } catch (error: any) {
+    } catch (error) {
       api.error({
         message: 'Error',
         description: error.message || 'Failed to submit feedback. Please try again later.',

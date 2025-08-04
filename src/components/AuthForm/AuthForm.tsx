@@ -49,12 +49,12 @@ const AuthForm = ({
     isSubmitting = false,
 }: AuthFormProps) => {
 
-    const handleFinish = (values: any) => {
+    const handleFinish = (values: Record<string, string>) => {
         let otp = '';
         for (let i = 0; i < Object.keys(values).length; i++) {
             otp += values['otp' + i];
         }
-        let result = { otp: otp };
+        const result = { otp: otp };
         if (onFinish) {
             onFinish(result);
         }

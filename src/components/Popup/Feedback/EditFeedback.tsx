@@ -25,7 +25,7 @@ const EditFeedback: React.FC<FeedbackProps> = (props) => {
     setIsFormOpen(false);
   };
 
-  const handleFinish = (values: any) => {
+  const handleFinish = (values: { rating: number; content: string; }) => {
     handleEditReview(values)
     setIsFormOpen(false);
 

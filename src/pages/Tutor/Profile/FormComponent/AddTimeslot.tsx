@@ -25,7 +25,7 @@ const AddTimeslot: React.FC<ScheduleProps> = (props) => {
     //---------------------------MODAL---------------------------
     function showModal() {
         setIsFormOpen(true);
-    };
+    }
 
     const handleCancel = () => {
         setIsFormOpen(false);

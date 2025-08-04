@@ -114,7 +114,7 @@ const CreateQuestion: React.FC<CreateQuestionProps> = ({ messageApi }) => {
         }
 
         // Check the file size
-        newFileList = newFileList.filter((file: any) => handleFileSizeCheck(file));
+        newFileList = newFileList.filter((file) => handleFileSizeCheck(file));
 
         setFileList(newFileList);
         form.setFieldsValue({ questionFile: newFileList }); // Update the form value

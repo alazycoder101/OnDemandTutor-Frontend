@@ -54,7 +54,7 @@ const Form1: React.FC<Form1Props> = ({
         newFileList[0].status = 'error';
         newFileList[0].response = 'File type must be .png, .jpg or .jpeg';
         return;
-      };
+      }
 
       for (let index = 0; index < newFileList.length; index++) {
         newFileList[index].status = 'done'

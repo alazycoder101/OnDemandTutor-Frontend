@@ -137,7 +137,7 @@ const TutorInfo: React.FC<TutorInfoProps> = (props) => {
 
     function showModal() {
         setIsFormOpen(true);
-    };
+    }
 
     const approveValidation = () => {
         if (acceptedDiploma.length === 0) {

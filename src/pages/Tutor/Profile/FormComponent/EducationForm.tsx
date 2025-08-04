@@ -26,7 +26,7 @@ const EducationForm: React.FC<EducationProps> = (props) => {
     //---------------------------MODAL---------------------------
     function showModal() {
         setIsFormOpen(true);
-    };
+    }
 
     const handleCancel = () => {
         setIsFormOpen(false);

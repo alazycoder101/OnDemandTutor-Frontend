@@ -102,7 +102,6 @@ export enum StaffLabelHeader {
     JOB = 'Tìm việc',
     JOB_DETAIL = 'Chi tiết công việc',
     TASK = 'Danh sách công việc',
-    TASK_DETAIL = 'Chi tiết công việc',
 }
 
 export enum GroupType {

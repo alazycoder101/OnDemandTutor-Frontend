@@ -92,7 +92,7 @@ const ChatRoom: React.FC = () => {
   }, [privateChats, tab]);
 
   const connect = () => {
-    let Sock = new SockJS(`${config.publicRuntime.API_URL}/ws`);
+    const Sock = new SockJS(`${config.publicRuntime.API_URL}/ws`);
     stompClient = over(Sock);
     stompClient.connect({}, onConnected);
   };

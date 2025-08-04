@@ -7,7 +7,7 @@ const Pagination:
   React.FC<{
     currentPage: number,
     totalPages: number,
-    paginate: any
+    paginate: (page: number) => void
   }> = (props) => {
 
     const pageNumber = [];

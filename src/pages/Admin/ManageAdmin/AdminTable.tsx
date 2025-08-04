@@ -12,7 +12,7 @@ interface Admin {
   dateOfBirth?: string;
   createAt?: string;
   status?: string;
-};
+}
 
 interface AdminTableProps {
   admins: Admin[];

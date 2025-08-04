@@ -6,7 +6,7 @@ type LinkProps = {
     className?: string;
     to: string;
     target?: string;
-    children: any;
+    children: React.ReactNode;
     zoom?: boolean;
     underline?: boolean;
     scroll?: boolean;

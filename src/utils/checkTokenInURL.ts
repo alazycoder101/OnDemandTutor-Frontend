@@ -7,7 +7,7 @@ type JwtType = {
     exp: number;
 };
 
-const checkTokenInURL = () => {
+const useCheckTokenInURL = () => {
     const { search } = useLocation();
     const token = cookieUtils.getToken();
 

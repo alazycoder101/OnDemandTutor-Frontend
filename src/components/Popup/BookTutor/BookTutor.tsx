@@ -51,7 +51,7 @@ const BookTutor: React.FC<BookTutorProps> = (props) => {
       setIsFormOpen(true);
     }
     else navigate(config.routes.public.login);
-  };
+  }
 
   useEffect(() => {
     (async () => {
@@ -108,7 +108,7 @@ const BookTutor: React.FC<BookTutorProps> = (props) => {
             const response = await createBooking(accountId, bookingData);
             await navigate(config.routes.student.makePayment, { state: { selectedSchedule: selectedSchedule, appointmentData: response.data, expired: new Date().getTime() + 15 * 60 * 1000 } });
           } else { console.error("Account ID is undefined") }
-        } catch (error: any) {
+        } catch (error) {
           api.error({
             message: 'Error create booking',
             description: error.response.data.message || 'There was an issue with creating your booking. Please try again later.',
