@@ -26,12 +26,12 @@ export const pages: DataType[] = [
         to: config.routes.public.searchTutors,
     },
     {
-        key: 2,
+        key: 3,
         title: 'Questions',
         to: config.routes.public.searchQuestions,
     },
     {
-        key: 3,
+        key: 4,
         title: 'Become a tutor',
         to: config.routes.student.registerTutor,
     },
