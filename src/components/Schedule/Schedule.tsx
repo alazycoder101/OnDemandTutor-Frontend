@@ -53,8 +53,8 @@ const Schedule: React.FC<ScheduleProps> = ({
           setStartDate(new Date(response.data.startDate))
           const start = new Date(response.data.startDate)
           start.setHours(start.getHours())
-          let newSchedule: ScheduleData[] = [];
-          let updateSchedule = response.data.schedules;
+          const newSchedule: ScheduleData[] = [];
+          const updateSchedule = response.data.schedules;
           updateSchedule.forEach((day: ScheduleDay) => {
             if (day.timeslots.length > 0) {
               day.timeslots.forEach((timeslot) => {

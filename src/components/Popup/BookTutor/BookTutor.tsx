@@ -51,7 +51,7 @@ const BookTutor: React.FC<BookTutorProps> = (props) => {
       setIsFormOpen(true);
     }
     else navigate(config.routes.public.login);
-  };
+  }
 
   useEffect(() => {
     (async () => {

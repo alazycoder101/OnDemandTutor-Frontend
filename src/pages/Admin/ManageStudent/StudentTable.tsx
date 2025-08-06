@@ -13,7 +13,7 @@ interface Student {
   dateOfBirth?: string;
   createAt?: string;
   status?: string;
-};
+}
 
 interface StudentTableProps {
   students: Student[];

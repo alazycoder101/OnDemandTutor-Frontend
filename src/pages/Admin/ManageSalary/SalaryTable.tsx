@@ -5,7 +5,7 @@ import EditSalary from './EditSalary';
 interface Tutor {
   fullName?: string;
   email?: string;
-};
+}
 interface Account {
   id: number;
   bankAccountNumber?: string;
@@ -16,7 +16,7 @@ interface Account {
   amount: number;
   status?: string;
   tutor?: Tutor;
-};
+}
 
 interface SalaryTableProps {
   withdrawRequest: Account[];

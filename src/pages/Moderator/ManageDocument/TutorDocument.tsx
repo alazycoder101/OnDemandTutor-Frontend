@@ -81,7 +81,7 @@ const TutorDocument: React.FC<TutorInfoProps> = (props) => {
 
     function showModal() {
         setIsFormOpen(true);
-    };
+    }
 
     const approveValidation = () => {
         let type: string;

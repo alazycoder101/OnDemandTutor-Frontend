@@ -51,7 +51,7 @@ const Feedback: React.FC<FeedbackProps> = (props) => {
       });
     }
 
-  };
+  }
 
   const handleCancel = () => {
     setIsFormOpen(false);

@@ -54,7 +54,7 @@ const AuthForm = ({
         for (let i = 0; i < Object.keys(values).length; i++) {
             otp += values['otp' + i];
         }
-        let result = { otp: otp };
+        const result = { otp: otp };
         if (onFinish) {
             onFinish(result);
         }

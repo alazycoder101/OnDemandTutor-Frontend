@@ -28,7 +28,7 @@ interface Education {
   majorName?: string;
   specialization?: string;
   verified?: boolean;
-};
+}
 
 interface EducationRaw {
   degreeType: string;
@@ -51,7 +51,7 @@ interface Tutor {
   subjects: string[],
   averageRating?: number;
   loading: boolean;
-};
+}
 
 export function toScheduleString(schedule: Schedule) {
   let scheduleString = '';
@@ -107,7 +107,7 @@ const MakePayment = () => {
 
           const educations = await getTutorEducation(tutorId)
 
-          let selectSchedule: Schedule[] = [];
+          const selectSchedule: Schedule[] = [];
           selectedSchedule.map((scd: ScheduleEvent, index: number) => {
             if (scd) {
               selectSchedule[index] = {

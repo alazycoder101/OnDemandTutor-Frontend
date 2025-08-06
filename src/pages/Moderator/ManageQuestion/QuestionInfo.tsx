@@ -30,7 +30,7 @@ const QuestionInfo: React.FC<QuestionInfoProps> = (props) => {
 
     function showModal() {
         setIsFormOpen(true);
-    };
+    }
 
     const handleCancel = () => {
         setIsFormOpen(false);

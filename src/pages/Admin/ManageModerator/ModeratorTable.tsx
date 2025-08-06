@@ -13,7 +13,7 @@ interface Moderator {
   dateOfBirth?: string;
   createAt?: string;
   status?: string;
-};
+}
 
 interface ModeratorTableProps {
   moderators: Moderator[];
