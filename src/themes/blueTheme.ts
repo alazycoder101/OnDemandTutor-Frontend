@@ -9,6 +9,7 @@ export const blueTheme = {
     colors: {
         primary: PRIMARY_COLOR,
         secondary: SECONDARY_COLOR,
+        backgroundGradient: 'linear-gradient(213deg, #007BFF 0%, #52C41A 100%)',
         facebook: '#1877F2',
         info: '#1677FF',
         warning: '#FAAD14',

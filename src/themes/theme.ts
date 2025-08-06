@@ -8,6 +8,7 @@ export const lightTheme = {
     colors: {
         primary: PRIMARY_COLOR,
         secondary: SECONDARY_COLOR,
+        backgroundGradient: 'linear-gradient(213deg, #4209C9 0%, #FA6EAD 100%)',
         facebook: '#1877F2',
         info: '#1677FF',
         warning: '#FAAD14',

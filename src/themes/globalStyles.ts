@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 1.6rem;
         line-height: 1.5;
-        background: linear-gradient(213deg, #4209C9 0%, #FA6EAD 100%);
+        background: ${({ theme }) => theme.colors.backgroundGradient};
         overflow: unset;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
