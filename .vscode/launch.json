@@ -9,6 +9,13 @@
             "webRoot": "${workspaceFolder}"
         },
         {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "name": "Launch development server",
             "request": "launch",
             "type": "node-terminal",
