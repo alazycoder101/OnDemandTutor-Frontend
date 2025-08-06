@@ -5,6 +5,7 @@ import { ConfigProvider, App as AppAntd } from 'antd';
 import { createStyledBreakpointsTheme } from 'styled-breakpoints';
 
 import { lightTheme, darkTheme, AntdThemeConfig } from './themes';
+import { blueTheme } from './themes/blueTheme';
 import { ThemeContext } from './contexts/ThemeContext';
 import GlobalStyles from './themes/globalStyles';
 import App from './App';
@@ -19,7 +20,7 @@ export const breakpoints = {
 } as const;
 
 const AppWrapper = () => {
-  const [theme, setTheme] = useState(lightTheme);
+  const [theme, setTheme] = useState(blueTheme);
 
   const styledTheme: DefaultTheme = useMemo(() => ({
     ...createStyledBreakpointsTheme({

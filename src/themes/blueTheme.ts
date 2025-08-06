@@ -3,6 +3,7 @@ const PRIMARY_COLOR: string = '#007BFF';
 const SECONDARY_COLOR: string = '#BCE0FF';
 
 export const blueTheme = {
+    name: 'blue',
     light: '',
     dark: '',
     colors: {

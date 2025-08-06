@@ -19,7 +19,19 @@ const saveThemeToLocalStorage = (theme: any) => {
 const loadThemeFromLocalStorage = () => {
   try {
     const savedTheme = localStorage.getItem('selectedTheme');
-    return savedTheme ? JSON.parse(savedTheme) : lightTheme;
+    if (savedTheme) {
+      return JSON.parse(savedTheme);
+    }
+
+    const defaultTheme = import.meta.env.VITE_DEFAULT_THEME;
+
+    if (defaultTheme === 'dark') {
+      return darkTheme;
+    } else if (defaultTheme === 'blue') {
+      return blueTheme;
+    } else {
+      return lightTheme;
+    }
   } catch (error) {
     console.error('Failed to load theme from local storage:', error);
     return lightTheme;
