@@ -1,7 +1,6 @@
 import { Collapse, List, Row, Typography } from 'antd';
 
 import styled from 'styled-components';
-import { theme } from '../../themes';
 
 const { Title, Paragraph } = Typography;
 
@@ -22,7 +21,7 @@ export const FeedbackWrapper = styled.div`
     height: 410px;
     z-index: 2;
     border-radius: 50px;
-    background-color: #f4d1f3;
+    background-color: var(--secondary-color);
     ${({ theme }) => theme.breakpoints.down('lg')} {
         width: 100%;
     }
@@ -33,7 +32,7 @@ export const StudentInfor = styled.div`
 export const BestServiceTitle = styled(Title)`
     text-align: center;
     &.ant-typography {
-        color: #fff;
+        color: var(--white-color);
         margin-bottom: 12px;
         font-size: 4rem;
         font-weight: 700;
@@ -42,7 +41,7 @@ export const BestServiceTitle = styled(Title)`
 `;
 export const BookingRatingAndPrice = styled(Title)`
     &.ant-typography {
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
         font-size: 30px;
         font-weight: 700;
         line-height: 1.25;
@@ -71,7 +70,7 @@ export const StudentName = styled(Paragraph)`
 export const BestServiceDesc = styled(Paragraph)`
     &.ant-typography {
         text-align: center;
-        color: #fff;
+        color: var(--white-color);
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 1.625;
@@ -95,7 +94,7 @@ export const SchoolName = styled(Paragraph)`
 `;
 
 export const BestServiceItem = styled.div`
-    background-color: #fff;
+    background-color: var(--white-color);
     height: 330px;
     display: flex;
     justify-content: center;
@@ -107,7 +106,7 @@ export const BestServiceItem = styled.div`
 `;
 export const BestTutorItem = styled(Row)`
     cursor: pointer;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 50px;
     & .ant-list-item {
         border-block-end: none;
@@ -122,14 +121,14 @@ export const TutorItem = styled(List.Item)`
 export const BestServiceButton = styled.button`
     cursor: pointer;
     height: 47.962px;
-    color: #fff;
+    color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14px;
     width: 100%;
     border-radius: 50px;
-    background-color: ${theme.colors.primary};
+    background-color: var(--primary-color);
 `;
 export const BestServiceImage = styled.img`
     width: 210px;
@@ -157,12 +156,12 @@ export const BookingTutorButton = styled.button`
     cursor: pointer;
     width: 197px;
     height: 41px;
-    color: #fff;
+    color: var(--white-color);
     font-size: 18px;
     font-style: normal;
     font-weight: 900;
     border-radius: 50px;
-    background-color: ${theme.colors.primary};
+    background-color: var(--primary-color);
     font-size: 12px;
     ${({ theme }) => theme.breakpoints.down('md')} {
         width: 150px;
@@ -180,12 +179,12 @@ export const SeeMoreButton = styled.button`
     cursor: pointer;
     width: 414px;
     height: 68px;
-    color: ${theme.colors.primary};
+    color: var(--primary-color);
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     border-radius: 50px;
-    background-color: #fff;
+    background-color: var(--white-color);
     font-size: 12px;
     ${({ theme }) => theme.breakpoints.down('sm')} {
         width: 300px;
@@ -198,13 +197,13 @@ export const ViewScheduleTutorButton = styled.button`
     cursor: pointer;
     width: 197px;
     height: 41px;
-    color: ${theme.colors.primary};
+    color: var(--primary-color);
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    border: 3px solid ${theme.colors.primary};
+    border: 3px solid var(--primary-color);
     border-radius: 50px;
-    background-color: #fff;
+    background-color: var(--white-color);
     font-size: 12px;
     ${({ theme }) => theme.breakpoints.down('md')} {
         width: 150px;
@@ -220,7 +219,7 @@ export const ViewScheduleTutorButton = styled.button`
 
 export const BestTutorContent = styled.div`
     margin-top: 30px;
-    color: ${theme.colors.primary};
+    color: var(--primary-color);
 `;
 export const BestTutorEducation = styled.div`
     display: flex;
@@ -236,7 +235,7 @@ export const BestTutorStudent = styled.div`
 
 export const BestTutorName = styled(Title)`
     &.ant-typography {
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -289,14 +288,14 @@ export const BookingThisTutor = styled.div`
 `;
 export const BestTutorDescription = styled(Paragraph)`
    &.ant-typography{
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
         font-family: 'Roboto';
 `;
 export const CollapseIconStyle = styled.div`
-    backgroundcolor: #fff;
+    backgroundcolor: var(--white-color);
     width: 40px;
     height: 40px;
-    color: #fff;
+    color: var(--white-color);
     borderradius: 50%;
     display: flex;
     justifycontent: center;
@@ -305,7 +304,7 @@ export const CollapseIconStyle = styled.div`
 
 export const QuestionTitle = styled(Title)`
     &.ant-typography {
-        color: #fff;
+        color: var(--white-color);
         text-transform: uppercase;
         margin-bottom: 0;
 
@@ -331,7 +330,7 @@ export const BookingInformation = styled.div`
 
 export const AnswerWrapper = styled.div`
     border-radius: 50px;
-    background-color: #fff;
+    background-color: var(--white-color);
     padding: 80px;
     ${({ theme }) => theme.breakpoints.down('md')} {
         padding: 30px;
@@ -342,7 +341,7 @@ export const QuestionWrapper = styled.div`
     padding: 106px 40px;
     height: 410px;
     border-radius: 0px 10px 10px 0px;
-    background-color: #f4d1f3;
+    background-color: var(--secondary-color);
     ${({ theme }) => theme.breakpoints.down('lg')} {
         padding: 100px;
         border-radius: 50px;
@@ -360,7 +359,7 @@ export const QuestionFeedbackWrapper = styled.div`
     padding: 200px 50px 200px 220px;
     height: 526px;
     border-radius: 150px 10px 10px 150px;
-    background-color: #fff;
+    background-color: var(--white-color);
     ${({ theme }) => theme.breakpoints.down('xl')} {
         padding: 150px 50px 200px 320px;
     }
@@ -376,7 +375,7 @@ export const QuestionTitleRight = styled(Title)`
     &.ant-typography {
         margin-bottom: 0;
         font-size: 48px;
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
         font-weight: 800;
         line-height: 1.25;
         ${({ theme }) => theme.breakpoints.down('lg')} {
@@ -399,15 +398,15 @@ export const FeedbackImg = styled.img`
 export const FeedbackTitle = styled(Title)`
     &.ant-typography {
         margin-bottom: 24px;
-        color: ${theme.colors.textPrimary};
+        color: var(--textPrimary-color);
         font-size: 4rem;
         font-weight: 600;
         line-height: 1.25;
     }
 `;
 export const CollapseStyle = styled(Collapse)`
-    color: #fff;
-    background-color: ${theme.colors.primary};
+    color: var(--white-color);
+    background-color: var(--primary-color);
     .ant-collapse-expand-icon {
         display: none;
     }
@@ -437,7 +436,7 @@ export const FeedbackStudentContent = styled(Paragraph)`
 
 export const AnswerContent = styled(Paragraph)`
     &.ant-typography {
-        color: #fff;
+        color: var(--white-color);
     }
 `;
 
@@ -445,7 +444,7 @@ export const TurtorVideo = styled.div<{ translate?: number }>`
     display: flex;
     justify-content: center;
     align-items: center; /* Chú ý là "align-items", không phải "align-item" */
-    background: #fff;
+    background: var(--white-color);
     height: 171px;
     border-radius: 15px;
     margin-top: 30px;

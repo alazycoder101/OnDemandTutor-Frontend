@@ -49,6 +49,8 @@ const GlobalStyles = createGlobalStyle`
         --toolbarBg-color: #F5F5F5;
         --adminBackground-color: #f8f9fa;
         --background-color: #FFF;
+        --backgroundGradient-color: linear-gradient(213deg, #4209C9 0%, #FA6EAD 100%);
+        --transition-primary: all 0.25s linear;
     }
     
     * {
@@ -65,7 +67,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Roboto', Arial, Helvetica, sans-serif;
         font-size: 1.6rem;
         line-height: 1.5;
-        background: var(--backgroundGradient-color, linear-gradient(213deg, #4209C9 0%, #FA6EAD 100%));
+        background: var(--backgroundGradient-color);
         overflow: unset;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;

@@ -1,7 +1,6 @@
 import AuthForm from '../../components/AuthForm';
 import { Typography } from 'antd';
 import styled from 'styled-components';
-import { theme } from '../../themes';
 
 const { Paragraph, Text } = Typography;
 
@@ -25,7 +24,7 @@ export const ForgotPasswordDescWrapper = styled.div`
 export const ForgotPasswordDesc = styled(Paragraph)`
     &.ant-typography {
         margin-bottom: 0;
-        color: ${theme.colors.textPrimary};
+        color: var(--textPrimary-color);
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 1.73333;
@@ -41,7 +40,7 @@ export const ForgotPasswordText = styled(Paragraph)`
     & .ant-typography,
     & .ant-statistic-content {
         margin-bottom: 0;
-        color: ${theme.colors.textSecondary};
+        color: var(--textSecondary-color);
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 2;
@@ -57,6 +56,6 @@ export const ForgotPasswordText = styled(Paragraph)`
 export const ForgotPasswordCountdown = styled(Text)`
     &.ant-typography {
         margin-left: 4px;
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
     }
 `;

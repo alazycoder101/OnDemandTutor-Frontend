@@ -118,6 +118,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     for (const color in currentTheme.colors) {
       root.style.setProperty(`--${color}-color`, currentTheme.colors[color as keyof ThemeColors]);
     }
+    // Set transition property
+    root.style.setProperty('--transition-primary', currentTheme.transition.primary);
   }, [currentTheme]);
 
   const setTheme = (theme: Theme) => {

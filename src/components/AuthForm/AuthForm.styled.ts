@@ -3,7 +3,6 @@ import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 import styled, { css } from 'styled-components';
 
 import Link from '../../components/Link';
-import { theme } from '../../themes';
 
 const { Title, Text } = Typography;
 
@@ -12,7 +11,7 @@ export const AuthForm = styled.div`
     position: fixed;
     inset: 0;
     overflow-y: auto;
-    background: linear-gradient(213deg, #4209c9 0%, #fa6ead 100%);
+    background: var(--backgroundGradient-color, linear-gradient(213deg, #4209c9 0%, #fa6ead 100%));
 `;
 
 export const FormRow = styled(Row)`
@@ -22,8 +21,8 @@ export const FormRow = styled(Row)`
     height: 700px;
     padding: 24px;
     border-radius: 30px;
-    background: ${theme.colors.white};
-    box-shadow: 0 4px 24px 0 ${theme.colors.shadowForm};
+    background: var(--white-color);
+    box-shadow: 0 4px 24px 0 var(--shadowForm-color);
 
     ${({ theme }) => theme.breakpoints.down('lg')} {
         width: auto;
@@ -61,7 +60,7 @@ export const FormWrapper = styled(Form)`
 export const FormTitle = styled(Title)`
     &.ant-typography {
         margin-bottom: 24px;
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
         font-size: 3.6rem;
         font-weight: 700;
         text-align: center;
@@ -83,7 +82,7 @@ export const FormItem = styled(Form.Item)`
         position: relative;
 
         &:has(.ant-form-item-explain-error:not(:empty)) .ant-form-item-label label {
-            color: ${theme.colors.error};
+            color: var(--error-color);
         }
 
         &:has(input:-webkit-autofill),
@@ -95,11 +94,11 @@ export const FormItem = styled(Form.Item)`
                 top: -2px;
                 left: 10px;
                 padding: 0 10px;
-                background-color: ${theme.colors.white};
+                background-color: var(--white-color);
             }
 
             & label {
-                color: ${theme.colors.primary};
+                color: var(--primary-color);
             }
         }
     }
@@ -113,10 +112,10 @@ export const FormItem = styled(Form.Item)`
         padding: 0;
         user-select: none;
         pointer-events: none;
-        transition: ${theme.transition.primary};
+        transition: var(--transition-primary);
 
         & label {
-            color: ${theme.colors.textSecondary};
+            color: var(--textSecondary-color);
             font-size: 1.6rem;
             font-weight: 400;
 
@@ -142,17 +141,17 @@ export const FormItem = styled(Form.Item)`
         padding: 12px 20px;
         font-size: 1.6rem;
         border-radius: 25px;
-        border-color: ${theme.colors.border};
+        border-color: var(--border-color);
 
         &:hover,
         &:focus {
-            border-color: ${theme.colors.primary};
+            border-color: var(--primary-color);
         }
     }
 
     & .ant-form-item-explain-error {
         margin-top: 2px;
-        color: ${theme.colors.error};
+        color: var(--error-color);
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 1.6;
@@ -173,7 +172,7 @@ export const FormItemOTP = styled(Form.Item)`
         position: relative;
 
         &:has(.ant-form-item-explain-error:not(:empty)) .ant-form-item-label label {
-            color: ${theme.colors.error};
+            color: var(--error-color);
         }
 
         &:has(input:-webkit-autofill),
@@ -185,11 +184,11 @@ export const FormItemOTP = styled(Form.Item)`
                 top: -2px;
                 left: 10px;
                 padding: 0 10px;
-                background-color: ${theme.colors.white};
+                background-color: var(--white-color);
             }
 
             & label {
-                color: ${theme.colors.primary};
+                color: var(--primary-color);
             }
         }
     }
@@ -203,10 +202,10 @@ export const FormItemOTP = styled(Form.Item)`
         padding: 0;
         user-select: none;
         pointer-events: none;
-        transition: ${theme.transition.primary};
+        transition: var(--transition-primary);
 
         & label {
-            color: ${theme.colors.textSecondary};
+            color: var(--textSecondary-color);
             font-size: 1.6rem;
             font-weight: 400;
 
@@ -233,16 +232,16 @@ export const FormItemOTP = styled(Form.Item)`
         font-size: 1.6rem;
         border: none;
         border-radius: 0;
-        border-bottom: 2px solid ${theme.colors.border};
+        border-bottom: 2px solid var(--border-color);
         &:hover,
         &:focus {
-            border-color: ${theme.colors.primary};
+            border-color: var(--primary-color);
         }
     }
 
     & .ant-form-item-explain-error {
         margin-top: 2px;
-        color: ${theme.colors.error};
+        color: var(--error-color);
         font-size: 1.4rem;
         font-weight: 400;
         line-height: 1.6;
@@ -252,11 +251,11 @@ export const FormItemOTP = styled(Form.Item)`
 export const FormIcon = css`
     & svg {
         font-size: 2rem;
-        transition: ${theme.transition.primary};
+        transition: var(--transition-primary);
     }
 
     &:hover svg {
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
     }
 `;
 
@@ -276,7 +275,7 @@ export const FormButton = styled(Button)`
     height: 50px;
     border-radius: 6px;
     & span {
-        color: ${theme.colors.white};
+        color: var(--white-color);
         font-size: 1.8rem;
         font-weight: 600;
         letter-spacing: 0.18px;
@@ -287,7 +286,7 @@ export const FormButton = styled(Button)`
     }
 
     &:disabled {
-        background-color: ${theme.colors.primary};
+        background-color: var(--primary-color);
         opacity: 0.9;
     }
 `;
@@ -300,7 +299,7 @@ export const FormButtonResendCode = styled(Button)`
     height: 50px;
     border-radius: 6px;
     & span {
-        color: ${theme.colors.white};
+        color: var(--white-color);
         font-size: 1.8rem;
         font-weight: 600;
         letter-spacing: 0.18px;
@@ -311,7 +310,7 @@ export const FormButtonResendCode = styled(Button)`
     }
 
     &:disabled {
-        background-color: ${theme.colors.primary};
+        background-color: var(--primary-color);
         opacity: 0.9;
     }
 `;
@@ -324,14 +323,14 @@ export const FormGoogleButton = styled(Link)`
     column-gap: 6px;
     margin-top: 24px;
     height: 50px;
-    border: 1px solid ${theme.colors.border};
+    border: 1px solid var(--border-color);
     border-radius: 6px;
-    transition: ${theme.transition.primary};
+    transition: var(--transition-primary);
 
     & span {
-        color: ${theme.colors.textSecondary};
+        color: var(--textSecondary-color);
         font-size: 1.6rem;
-        transition: ${theme.transition.primary};
+        transition: var(--transition-primary);
     }
 
     & svg {
@@ -339,10 +338,10 @@ export const FormGoogleButton = styled(Link)`
     }
 
     &:hover {
-        border-color: ${theme.colors.primary};
+        border-color: var(--primary-color);
 
         & span {
-            color: ${theme.colors.primary};
+            color: var(--primary-color);
         }
     }
 `;
@@ -354,7 +353,7 @@ export const FormRedirect = styled(Text)`
 
     column-gap: 8px;
     margin-top: 36px;
-    color: ${theme.colors.textPrimary};
+    color: var(--textPrimary-color);
     font-size: 1.8rem;
 `;
 
@@ -362,10 +361,10 @@ export const FormForgotPassword = styled(Link)`
     display: block;
     margin: 12px auto;
     font-size: 1.7rem;
-    color: ${theme.colors.textSecondary};
+    color: var(--textSecondary-color);
 
     &:hover {
-        color: ${theme.colors.textPrimary};
+        color: var(--textPrimary-color);
     }
 `;
 
@@ -386,7 +385,7 @@ export const FormImageOverlay = styled.div`
     inset: 0;
     z-index: 1;
     height: 100%;
-    background: ${theme.colors.overlayImage};
+    background: var(--overlayImage-color);
 `;
 
 export const FormImage = styled(Image)`

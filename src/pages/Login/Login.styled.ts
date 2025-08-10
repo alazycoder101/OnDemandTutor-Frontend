@@ -1,14 +1,12 @@
 import { Typography } from 'antd';
 import styled from 'styled-components';
 
-import { theme } from '../../themes';
-
 const { Paragraph } = Typography;
 
 export const LoginDesc = styled(Paragraph)`
     &.ant-typography {
         margin-bottom: 36px;
-        color: ${theme.colors.textSecondary};
+        color: var(--textSecondary-color);
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 1.73333;
@@ -17,21 +15,21 @@ export const LoginDesc = styled(Paragraph)`
         a {
             margin: 0 4px;
             font-weight: 700;
-            color: ${theme.colors.textSecondary};
-            transition: ${theme.transition.primary};
+            color: var(--textSecondary-color);
+            transition: var(--transition-primary);
 
             span:first-child {
                 font-size: inherit;
-                color: ${theme.colors.primary};
+                color: var(--primary-color);
             }
 
             span:last-child {
                 font-size: inherit;
-                color: ${theme.colors.primary};
+                color: var(--primary-color);
             }
 
             &:hover {
-                color: ${theme.colors.primary};
+                color: var(--primary-color);
             }
         }
 

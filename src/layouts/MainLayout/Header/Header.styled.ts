@@ -2,12 +2,11 @@ import { Col, List } from 'antd';
 import styled, { css } from 'styled-components';
 
 import Link from '../../../components/Link';
-import { theme } from '../../../themes';
 
 export const Header = styled.header<{ $isScroll: boolean }>`
     width: 100%;
     padding: 24px 0;
-    background-color: #fff;
+    background-color: var(--white-color);
     height: 100px;
     position: fixed;
     top: 0;
@@ -17,9 +16,9 @@ export const Header = styled.header<{ $isScroll: boolean }>`
     ${(props) =>
         props.$isScroll &&
         css`
-            background: ${theme.colors.white};
+            background: var(--white-color);
             transition: all 0.4s ease-in;
-            box-shadow: 0px 17px 55px 0px ${theme.colors.shadowCart};
+            box-shadow: 0px 17px 55px 0px var(--shadowCart-color);
         `}
 `;
 
@@ -34,7 +33,7 @@ export const Navbar = styled(List)`
 `;
 
 export const ColumnStyle = styled(Col)`
-    border-right: 2.5px solid #b94ab7;
+    border-right: 2.5px solid var(--primary-color);
 
     @media (max-width: 992px) {
         border-right: none;
@@ -44,7 +43,7 @@ export const ColumnStyle = styled(Col)`
 export const NavbarLink = styled(Link)`
     position: relative;
     display: inline-block;
-    color: #b94ab7;
+    color: var(--primary-color);
     font-family: 'SVN-Poppins', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
@@ -57,7 +56,7 @@ export const NavbarLink = styled(Link)`
         bottom: 1px;
         width: 0;
         height: 2px;
-        background: ${theme.colors.primary};
+        background: var(--primary-color);
     }
 
     &.active::before {
@@ -73,7 +72,7 @@ export const HeaderAvatarWrapper = styled.div`
     & span.ant-typography {
         padding: 0 24px;
         width: 100%;
-        color: ${theme.colors.textPrimary};
+        color: var(--textPrimary-color);
         font-size: 1.7rem;
         font-weight: 500;
         line-height: 1;

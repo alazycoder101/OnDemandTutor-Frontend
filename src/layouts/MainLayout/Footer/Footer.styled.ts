@@ -1,17 +1,16 @@
 import { Button, Row } from 'antd';
 import styled from 'styled-components';
-import { theme } from '../../../themes';
 import Link from '../../../components/Link';
 
 export const FooterSection = styled.footer`
     padding: 60px 0;
-    background-color: #fff;
+    background-color: var(--white-color);
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 `;
 
 export const MyTutorImage = styled.img`
     padding: 60px 0;
-    background-color: #fff;
+    background-color: var(--white-color);
 `;
 
 export const FooterCTA = styled.div`
@@ -22,7 +21,7 @@ export const FooterCTA = styled.div`
 
     & .ant-typography {
         margin-bottom: 0;
-        color: ${theme.colors.textPrimary};
+        color: var(--textPrimary-color);
         font-size: 2rem;
         font-weight: 500;
         letter-spacing: -0.3px;
@@ -40,26 +39,26 @@ export const FooterButton = styled(Button)`
     min-width: 130px;
     height: var(--height);
     line-height: var(--height);
-    background-color: ${theme.colors.primary};
-    border: 1px solid ${theme.colors.primary};
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 
     &::before {
         content: '';
         position: absolute;
         inset: 0;
-        background-color: ${theme.colors.white};
+        background-color: var(--white-color);
         border-radius: 6px;
         transform: scaleX(0);
-        transition: ${theme.transition.primary};
+        transition: var(--transition-primary);
     }
 
     & span {
         position: relative;
-        color: ${theme.colors.white};
+        color: var(--white-color);
         font-size: 1.8rem;
         font-weight: 400;
         line-height: 1.5;
-        transition: ${theme.transition.primary};
+        transition: var(--transition-primary);
     }
 
     &:hover::before {
@@ -67,7 +66,7 @@ export const FooterButton = styled(Button)`
     }
 
     &:hover span {
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
     }
 
     ${({ theme }) => theme.breakpoints.down('sm')} {
@@ -78,7 +77,7 @@ export const FooterButton = styled(Button)`
 export const FooterColumnWrapper = styled.div`
     & h2.ant-typography {
         margin-bottom: 20px;
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
     }
 
     & li.ant-list-item {
@@ -86,7 +85,7 @@ export const FooterColumnWrapper = styled.div`
         border: none;
 
         & a {
-            color: ${theme.colors.primary};
+            color: var(--primary-color);
             font-size: 1.6rem;
             font-weight: 400;
             text-align: left;
@@ -106,7 +105,7 @@ export const FooterCopyright = styled.div`
     text-align: center;
 
     & span.ant-typography {
-        color: ${theme.colors.primary};
+        color: var(--primary-color);
         font-size: 1.6rem;
         font-weight: 400;
         letter-spacing: -0.205px;
@@ -132,8 +131,8 @@ export const FooterSocials = styled.div`
     & a {
         display: flex;
         padding: 8px;
-        color: ${theme.colors.primary};
-        border: 1px solid ${theme.colors.primary};
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
         border-radius: 999px;
     }
 
