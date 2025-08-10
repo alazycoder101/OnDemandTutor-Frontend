@@ -1,12 +1,10 @@
-import { AntdThemeConfig } from './themes/';
-
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import { StrictMode } from 'react';
 import GlobalStyles from './themes/globalStyles.ts';
 import { DefaultTheme, ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { createStyledBreakpointsTheme } from 'styled-breakpoints';
-import { ConfigProvider, App as AppAntd } from 'antd';
+import { App as AppAntd } from 'antd';
 
 import { LocaleProvider } from './contexts/LocaleContext.tsx';
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -30,12 +28,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ThemeProvider>
       <LocaleProvider>
         <StyledThemeProvider theme={styledTheme}>
-          <ConfigProvider theme={AntdThemeConfig}>
-            <AppAntd>
-              <App />
-            </AppAntd>
-            <GlobalStyles />
-          </ConfigProvider>
+          <AppAntd>
+            <App />
+          </AppAntd>
+          <GlobalStyles />
         </StyledThemeProvider>
       </LocaleProvider>
     </ThemeProvider>

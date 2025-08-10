@@ -133,12 +133,12 @@ export const blueTheme = {
         yellow: '#FFEB3B',
         blue: '#2196F3',
         border: '#90CAF9',
-        textPrimary: 'rgba(13, 71, 161, 0.85)',
-        textSecondary: 'rgba(13, 71, 161, 0.6)',
+        textPrimary: 'rgba(0, 0, 0, 0.85)', // Changed to dark text for better contrast
+        textSecondary: 'rgba(0, 0, 0, 0.6)', // Changed to darker text for better contrast
         textTertiary: '#424242',
         textQuaternary: '#212121',
-        disabledPlaceholder: 'rgba(13, 71, 161, 0.3)',
-        divider: 'rgba(13, 71, 161, 0.1)',
+        disabledPlaceholder: 'rgba(0, 0, 0, 0.3)',
+        divider: 'rgba(0, 0, 0, 0.1)',
         hoverPrimary: 'rgba(33, 150, 243, 0.1)',
         hoverSecondary: '#E3F2FD',
         white: '#E3F2FD',
@@ -178,13 +178,3 @@ export const blueTheme = {
 
 // Default theme (for backward compatibility)
 export const theme = lightTheme;
-
-export const AntdThemeConfig = {
-    token: {
-        colorPrimary: PRIMARY_COLOR,
-        colorSecondary: SECONDARY_COLOR,
-        colorLink: PRIMARY_COLOR,
-        fontFamily: 'Roboto',
-        colorLinkHover: PRIMARY_COLOR,
-    },
-};

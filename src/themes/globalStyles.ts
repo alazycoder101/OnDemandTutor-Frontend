@@ -130,6 +130,180 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     }
 
+    /* Ant Design Components */
+    .ant-btn {
+        transition: var(--transition-primary);
+    }
+
+    .ant-btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .ant-btn-primary:hover,
+    .ant-btn-primary:focus {
+        background-color: var(--hoverPrimary-color);
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .ant-btn-default {
+        border-color: var(--border-color);
+        color: var(--textPrimary-color);
+    }
+
+    .ant-btn-default:hover,
+    .ant-btn-default:focus {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    .ant-collapse {
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+    }
+
+    .ant-collapse > .ant-collapse-item {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .ant-collapse > .ant-collapse-item:last-child {
+        border-bottom: none;
+    }
+
+    .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+        background-color: var(--white-color);
+        color: var(--textPrimary-color);
+    }
+
+    .ant-collapse-content {
+        background-color: var(--white-color);
+        color: var(--textPrimary-color);
+    }
+
+    .ant-form-item-label > label {
+        color: var(--textPrimary-color);
+    }
+
+    .ant-input,
+    .ant-input-affix-wrapper,
+    .ant-input-password,
+    .ant-input-number,
+    .ant-picker {
+        border-color: var(--borderInput-color);
+        color: var(--textPrimary-color);
+        background-color: var(--white-color);
+    }
+
+    .ant-input:focus,
+    .ant-input-affix-wrapper:focus,
+    .ant-input-password:focus,
+    .ant-input-number:focus,
+    .ant-picker:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px var(--hoverPrimary-color);
+    }
+
+    .ant-input:hover,
+    .ant-input-affix-wrapper:hover,
+    .ant-input-password:hover,
+    .ant-input-number:hover,
+    .ant-picker:hover {
+        border-color: var(--primary-color);
+    }
+
+    .ant-select-selector {
+        border-color: var(--borderInput-color) !important;
+        color: var(--textPrimary-color);
+        background-color: var(--white-color) !important;
+    }
+
+    .ant-select-focused .ant-select-selector {
+        border-color: var(--primary-color) !important;
+        box-shadow: 0 0 0 2px var(--hoverPrimary-color) !important;
+    }
+
+    .ant-select:hover .ant-select-selector {
+        border-color: var(--primary-color) !important;
+    }
+
+    .ant-select-dropdown {
+        background-color: var(--white-color);
+        border-color: var(--border-color);
+    }
+
+    .ant-select-item {
+        color: var(--textPrimary-color);
+    }
+
+    .ant-select-item-option-active,
+    .ant-select-item-option-selected {
+        background-color: var(--hoverPrimary-color);
+    }
+
+    .ant-list-item {
+        border-bottom: 1px solid var(--border-color);
+        color: var(--textPrimary-color);
+    }
+
+    .ant-list-item:last-child {
+        border-bottom: none;
+    }
+
+    .ant-card {
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
+        color: var(--textPrimary-color);
+    }
+
+    .ant-card-head {
+        background-color: var(--white-color);
+        border-bottom: 1px solid var(--border-color);
+        color: var(--textPrimary-color);
+    }
+
+    .ant-tabs-tab {
+        color: var(--textSecondary-color);
+    }
+
+    .ant-tabs-tab-active {
+        color: var(--primary-color);
+    }
+
+    .ant-tabs-ink-bar {
+        background-color: var(--primary-color);
+    }
+
+    .ant-radio-wrapper {
+        color: var(--textPrimary-color);
+    }
+
+    .ant-checkbox-wrapper {
+        color: var(--textPrimary-color);
+    }
+
+    .ant-alert {
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
+    }
+
+    .ant-alert-info {
+        border-color: var(--info-color);
+    }
+
+    .ant-alert-success {
+        border-color: var(--success-color);
+    }
+
+    .ant-alert-warning {
+        border-color: var(--warning-color);
+    }
+
+    .ant-alert-error {
+        border-color: var(--error-color);
+    }
+
     /* Change Autocomplete styles in Chrome*/
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 

@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { lightTheme, darkTheme, blueTheme } from '../themes';
+import { ConfigProvider } from 'antd';
 
 // Define theme types
 export type ThemeType = 'light' | 'dark' | 'blue';
@@ -153,9 +154,54 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     }
   };
 
+  // Create Ant Design theme config based on current theme
+  const antdThemeConfig = {
+    token: {
+      colorPrimary: currentTheme.colors.primary,
+      colorLink: currentTheme.colors.primary,
+      colorText: currentTheme.colors.textPrimary,
+      colorTextSecondary: currentTheme.colors.textSecondary,
+      colorBorder: currentTheme.colors.border,
+      colorBgContainer: currentTheme.colors.white,
+      colorBgElevated: currentTheme.colors.white,
+      fontFamily: 'Roboto',
+    },
+    components: {
+      Button: {
+        colorPrimary: currentTheme.colors.primary,
+        colorPrimaryHover: currentTheme.colors.primary,
+        colorPrimaryActive: currentTheme.colors.primary,
+        primaryColor: currentTheme.colors.white,
+      },
+      Input: {
+        colorBorder: currentTheme.colors.borderInput,
+        colorText: currentTheme.colors.textPrimary,
+        colorTextPlaceholder: currentTheme.colors.disabledPlaceholder,
+      },
+      Select: {
+        colorBorder: currentTheme.colors.borderInput,
+        colorText: currentTheme.colors.textPrimary,
+      },
+      Collapse: {
+        colorBorder: currentTheme.colors.border,
+        colorText: currentTheme.colors.textPrimary,
+        colorTextHeading: currentTheme.colors.textPrimary,
+      },
+      Form: {
+        colorText: currentTheme.colors.textPrimary,
+      },
+      Typography: {
+        colorText: currentTheme.colors.textPrimary,
+        colorTextSecondary: currentTheme.colors.textSecondary,
+      },
+    },
+  };
+
   return (
     <ThemeContext.Provider value={{ theme: currentTheme, setTheme, toggleTheme, setCurrentTheme }}>
-      {children}
+      <ConfigProvider theme={antdThemeConfig}>
+        {children}
+      </ConfigProvider>
     </ThemeContext.Provider>
   );
 };
