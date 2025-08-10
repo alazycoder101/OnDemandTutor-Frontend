@@ -2,9 +2,9 @@
 const PRIMARY_COLOR: string = '#B94AB7';
 const SECONDARY_COLOR: string = '#F4D1F3';
 
-export const theme = {
-    light: '',
-    dark: '',
+// Light theme
+export const lightTheme = {
+    name: 'light' as const,
     colors: {
         primary: PRIMARY_COLOR,
         secondary: SECONDARY_COLOR,
@@ -52,11 +52,132 @@ export const theme = {
         borderSchedule: '#EBEBEB',
         toolbarBg: '#F5F5F5',
         adminBackground: '#f8f9fa',
+        background: '#FFF',
+        backgroundGradient: 'linear-gradient(213deg, #4209C9 0%, #FA6EAD 100%)',
     },
     transition: {
         primary: 'all 0.25s linear',
     },
 };
+
+// Dark theme
+export const darkTheme = {
+    name: 'dark' as const,
+    colors: {
+        primary: '#9C27B0',
+        secondary: '#4A148C',
+        facebook: '#1877F2',
+        info: '#1677FF',
+        warning: '#FAAD14',
+        success: '#52C41A',
+        error: '#FF4D4F',
+        grey: '#616161',
+        yellow: '#FFCE3D',
+        blue: '#42A5F5',
+        border: '#424242',
+        textPrimary: 'rgba(255, 255, 255, 0.85)',
+        textSecondary: 'rgba(255, 255, 255, 0.45)',
+        textTertiary: '#9E9E9E',
+        textQuaternary: '#B0BEC5',
+        disabledPlaceholder: 'rgba(255, 255, 255, 0.25)',
+        divider: 'rgba(250, 250, 250, 0.06)',
+        hoverPrimary: 'rgba(156, 39, 176, 0.1)',
+        hoverSecondary: '#424242',
+        white: '#121212',
+        black: '#FFF',
+        shadowForm: 'rgb(0 0 0 / 20%)',
+        shadowCart: 'rgba(0, 0, 0, 0.12)',
+        shadowDropdown: 'rgba(0, 0, 0, 0.16)',
+        shadowCartHover: 'rgba(0, 0, 0, 0.14)',
+        shadowPurchased: 'rgba(0, 0, 0, 0.12)',
+        shadowPurchasedHover: 'rgba(0, 0, 0, 0.14)',
+        shadowButton: 'rgba(0, 0, 0, 0.08)',
+        overlayImage: 'rgba(106, 111, 119, 0.3)',
+        borderDefault: '#303030',
+        borderInput: '#616161',
+        starIcon: '#FADB14',
+        descTabBorder: '#424242',
+        done: '#1BC47D',
+        doneBackground: '#004D40',
+        processing: '#FFC700',
+        processingBackground: '#4A148C',
+        incoming: '#FF9500',
+        incomingBackground: '#3E2723',
+        cancel: '#FF2942',
+        cancelBackground: '#B71C1C',
+        pending: '#757575',
+        pendingBackground: '#424242',
+        borderSchedule: '#424242',
+        toolbarBg: '#212121',
+        adminBackground: '#1E1E1E',
+        background: '#121212',
+        backgroundGradient: 'linear-gradient(213deg, #2C0763 0%, #9C27B0 100%)',
+    },
+    transition: {
+        primary: 'all 0.25s linear',
+    },
+};
+
+// Blue theme
+export const blueTheme = {
+    name: 'blue' as const,
+    colors: {
+        primary: '#2196F3',
+        secondary: '#0D47A1',
+        facebook: '#1877F2',
+        info: '#1677FF',
+        warning: '#FF9800',
+        success: '#4CAF50',
+        error: '#F44336',
+        grey: '#9E9E9E',
+        yellow: '#FFEB3B',
+        blue: '#2196F3',
+        border: '#90CAF9',
+        textPrimary: 'rgba(13, 71, 161, 0.85)',
+        textSecondary: 'rgba(13, 71, 161, 0.6)',
+        textTertiary: '#424242',
+        textQuaternary: '#212121',
+        disabledPlaceholder: 'rgba(13, 71, 161, 0.3)',
+        divider: 'rgba(13, 71, 161, 0.1)',
+        hoverPrimary: 'rgba(33, 150, 243, 0.1)',
+        hoverSecondary: '#E3F2FD',
+        white: '#E3F2FD',
+        black: '#0D47A1',
+        shadowForm: 'rgb(33 150 243 / 15%)',
+        shadowCart: 'rgba(33, 150, 243, 0.1)',
+        shadowDropdown: 'rgba(33, 150, 243, 0.1)',
+        shadowCartHover: 'rgba(33, 150, 243, 0.15)',
+        shadowPurchased: 'rgba(33, 150, 243, 0.1)',
+        shadowPurchasedHover: 'rgba(33, 150, 243, 0.15)',
+        shadowButton: 'rgba(33, 150, 243, 0.08)',
+        overlayImage: 'rgba(33, 150, 243, 0.2)',
+        borderDefault: '#BBDEFB',
+        borderInput: '#64B5F6',
+        starIcon: '#FFD600',
+        descTabBorder: '#90CAF9',
+        done: '#00C853',
+        doneBackground: '#B9F6CA',
+        processing: '#FFD600',
+        processingBackground: '#FFFF8D',
+        incoming: '#FF6D00',
+        incomingBackground: '#FFD180',
+        cancel: '#FF1744',
+        cancelBackground: '#FF8A80',
+        pending: '#757575',
+        pendingBackground: '#F5F5F5',
+        borderSchedule: '#90CAF9',
+        toolbarBg: '#BBDEFB',
+        adminBackground: '#F5F9FF',
+        background: '#E3F2FD',
+        backgroundGradient: 'linear-gradient(213deg, #0D47A1 0%, #2196F3 100%)',
+    },
+    transition: {
+        primary: 'all 0.25s linear',
+    },
+};
+
+// Default theme (for backward compatibility)
+export const theme = lightTheme;
 
 export const AntdThemeConfig = {
     token: {

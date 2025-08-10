@@ -6,6 +6,7 @@ import Container from '../../../components/Container';
 import Logo from '../../../components/Logo';
 
 import Toolbar from '../../../components/Toolbar';
+import ThemeSwitcher from '../../../components/ThemeSwitcher';
 import config from '../../../config';
 import cookieUtils from '../../../utils/cookieUtils';
 
@@ -99,21 +100,28 @@ const Header = ({ role, navbar, menu, avatarUrl, status }: HeaderProps) => {
 
                     {role ? (
                         <Col lg={3} md={0} sm={0} xs={0}>
-                            <Toolbar
-                                menu={items}
-                                avatar={avatarUrl}
-                            />
+                            <Flex gap={8} align="center">
+                                <ThemeSwitcher />
+                                <Toolbar
+                                    menu={items}
+                                    avatar={avatarUrl}
+                                />
+                            </Flex>
                         </Col>
                     ) : (
                         <Col lg={3} md={0} sm={0} xs={0}>
-                            <Styled.NavbarLink to={config.routes.public.login}>
-                                Login
-                            </Styled.NavbarLink>
+                            <Flex gap={8} align="center">
+                                <ThemeSwitcher />
+                                <Styled.NavbarLink to={config.routes.public.login}>
+                                    Login
+                                </Styled.NavbarLink>
+                            </Flex>
                         </Col>
                     )}
 
                     <Col lg={0}>
                         <Flex gap={16}>
+                            <ThemeSwitcher />
                             <MobileMenu menu={menu} />
                         </Flex>
                     </Col>
